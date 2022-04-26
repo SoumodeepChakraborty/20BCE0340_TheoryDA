@@ -36,7 +36,7 @@ The way that Merkle trees can be helpful in a peer-to-peer system has to do with
 
 ## ** **3.Algorithm** **
 
-**Find Operation in Merkle Tree**
+### **Find Operation in Merkle Tree**
 
 This function is used to **check whether the given key is present** in the Merkle tree or not. If it is present then it will return that node else it will return null.
 
@@ -51,7 +51,7 @@ Step 4: If the key is smaller than tree->key then we will return find(tree->left
 Step 5: else return find(tree->right, key)
 
 
-**Add Operation in Merkle Tree**
+### **Add Operation in Merkle Tree**
 
 This function is used to **add a node** into the Merkle tree.
 
@@ -73,7 +73,7 @@ Step 7: If the key is already present in the tree then we will update the value.
 
 Step 8: If it is not present in the tree then we will use the insert function to insert the element.
 
-Algorithm of insert function.
+**Algorithm of insert function.**
 
 Step 1: It will take tree and item pointers of node data type as parameters.
 
@@ -84,3 +84,52 @@ Step 3: If item->key is smaller than tree->key and tree->left is not null then c
 Step 4: If item->key is greater than tree->key and tree->right is null then assign the item to tree->right.
 
 Step 5: If item->key is greater than tree->key and tree->right is not null then call insert function with tree->right and item as parameters.
+
+### **Delete Operation in Merkle Tree**
+
+This function is used to **delete a node from Merkle tree.** If the key given is present in the Merkle tree then it will delete the node from the tree.
+
+Algorithm to delete a node in Merkle tree.
+
+Step 1: We will take a key as a parameter.
+
+Step 2: Take the hash(key) and store it in a variable called index.
+
+Step 3: store (struct node*) arr[index].head in a pointer called tree of datatype node.
+
+Step 4: If the tree is null then the key is not present.
+
+Step 5: If the tree is not null then we will check if the key is already present in the tree using the find function.
+
+Step 6: If the find function returns null then the key is not present in the tree.
+
+Step 7: If it is not null then we will use the remove function to delete the element.
+
+**Algorithm of remove function.**
+
+Step 1: It will take tree and key as parameters.
+
+Step 2: If the tree is null then return null.
+
+Step 3: If the key is smaller than the tree->key then tree->left is equal to remove(tree->left, key) and return tree.
+
+Step 4: If the key is greater than the tree->key then tree->right is equal to remove(tree->right, key) and return tree.
+
+Step 5: else if the tree->left is equal to null and the tree->right is equal to null then decrement the size and return tree->left.
+
+Step 6: else if the tree->left is not equal to null and the tree->right is equal to null then decrement the size and return tree->left.
+
+Step 7: else if tree->left is equal to null and tree->right is not equal to null then decrement the size and return tree->right.
+
+Step 8: else assign tree->left to a pointer called left of data type node.
+
+Step 9: While left->right is not equal to null, left is equal to left->right.
+
+Step 10: tree->key is equal to left->key.
+
+Step 11: tree->value is equal to left->value.
+
+Step 12: tree->left is equal to remove(tree->left, tree->key).
+
+Step 13: Return tree.
+
