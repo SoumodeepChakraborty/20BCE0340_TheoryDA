@@ -133,3 +133,16 @@ Step 12: tree->left is equal to remove(tree->left, tree->key).
 
 Step 13: Return tree.
 
+## ** **Illustrate the Steps of the Algorithm** ** 
+
+A Merkle tree is constructed by recursively hashing pairs of nodes until there is only one hash.
+
+![alt text](https://github.com/[SoumodeepChakraborty]/[20BCE0340_TheoryDA]/blob/[main]/image.jpg?raw=true)
+
+a, b, c, and d are some data elements (files, JSON, etc) and H is a hash function.
+
+a hash function acts as a “digital fingerprint” of some piece of data by mapping it to a simple string with a low probability that any other piece of data will map to the same string.
+
+Each node is created by hashing the concatenation of its “parents” in the tree.
+
+#### Note: Merkle tree are mostly a binary tree but there are also Trees. Platforms like Ethereum use nonbinary tree.
