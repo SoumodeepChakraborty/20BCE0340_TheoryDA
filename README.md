@@ -34,7 +34,7 @@ The reason that Merkle trees are useful in distributed systems is that it is ine
 The way that Merkle trees can be helpful in a peer-to-peer system has to do with trust. Before you download a file from a peer-to-peer source—like Tor—the root hash is obtained from a trusted source. After that, you can obtain lower nodes of the Merkle tree from untrusted peers. All of these nodes exist in the same tree-like structure described above, and they all are partial representations of the same data. The nodes from untrusted sources are checked against the trusted hash. If they match the trusted source (meaning they fit into the same Merkle tree), they are accepted and the process continues. If they are no good, they are discarded and searched for again from a different source .
 
 
-** **3.Algorithm** **
+## ** **3.Algorithm** **
 
 **Find Operation in Merkle Tree**
 
@@ -49,3 +49,38 @@ Step 3: If the tree->key is equal to the key we will return the tree.
 Step 4: If the key is smaller than tree->key then we will return find(tree->left, key)
 
 Step 5: else return find(tree->right, key)
+
+
+**Add Operation in Merkle Tree**
+
+This function is used to **add a node** into the Merkle tree.
+
+Algorithm to add a node in Merkle tree.
+
+Step 1: We will take key and value as parameters.
+
+Step 2: Take the hash(key) and store it in a variable called index.
+
+Step 3: store (struct node*) arr[index].head in a pointer called tree of datatype node.
+
+Step 4: create a new node with its key as key and value as value and both links as null.
+
+Step 5: If the tree is null then assign the new node to the head and increment the size by 1.
+
+Step 6: If the tree is not null then we will check if the key is already present in the tree using the find function.
+
+Step 7: If the key is already present in the tree then we will update the value.
+
+Step 8: If it is not present in the tree then we will use the insert function to insert the element.
+
+Algorithm of insert function.
+
+Step 1: It will take tree and item pointers of node data type as parameters.
+
+Step 2: If item->key is smaller than tree->key and tree->left is null then assign the item to tree->left.
+
+Step 3: If item->key is smaller than tree->key and tree->left is not null then call insert function with tree->left and item as parameters.
+
+Step 4: If item->key is greater than tree->key and tree->right is null then assign the item to tree->right.
+
+Step 5: If item->key is greater than tree->key and tree->right is not null then call insert function with tree->right and item as parameters.
