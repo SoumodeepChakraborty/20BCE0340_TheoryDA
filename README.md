@@ -40,7 +40,11 @@ The way that Merkle trees can be helpful in a peer-to-peer system has to do with
 This function is used to **check whether the given key is present** in the Merkle tree or not. If it is present then it will return that node else it will return null.
 
 Step 1: We will take tree and key as parameters.
+
 Step 2: If the tree is null then we will return null.
+
 Step 3: If the tree->key is equal to the key we will return the tree.
+
 Step 4: If the key is smaller than tree->key then we will return find(tree->left, key)
+
 Step 5: else return find(tree->right, key)
