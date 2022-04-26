@@ -137,7 +137,7 @@ Step 13: Return tree.
 
 A Merkle tree is constructed by recursively hashing pairs of nodes until there is only one hash.
 
-![Image of Merkle Tree](https://github.com/[SoumodeepChakraborty]/[20BCE0340_TheoryDA]/blob/[main]/Merkle.jpg?raw=true)
+![Image of Merkle Tree](https://github.com/SoumodeepChakraborty/20BCE0340_TheoryDA/blob/main/Merkle.jpg)
 
 a, b, c, and d are some data elements (files, JSON, etc) and H is a hash function.
 
