@@ -35,6 +35,7 @@ The way that Merkle trees can be helpful in a peer-to-peer system has to do with
 
 
 ** **3.Algorithm** **
+
 **Find Operation in Merkle Tree**
 
 This function is used to **check whether the given key is present** in the Merkle tree or not. If it is present then it will return that node else it will return null.
