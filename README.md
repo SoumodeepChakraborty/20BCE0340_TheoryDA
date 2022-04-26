@@ -146,3 +146,7 @@ a hash function acts as a “digital fingerprint” of some piece of data by map
 Each node is created by hashing the concatenation of its “parents” in the tree.
 
 #### Note: Merkle tree are mostly a binary tree but there are also Trees. Platforms like Ethereum use nonbinary tree.
+
+
+## **Create and Verify the Merkle Tree**
+### Files added to the Repository
