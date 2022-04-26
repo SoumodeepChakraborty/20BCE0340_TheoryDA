@@ -32,3 +32,15 @@ The reason that Merkle trees are useful in distributed systems is that it is ine
 
 
 The way that Merkle trees can be helpful in a peer-to-peer system has to do with trust. Before you download a file from a peer-to-peer source—like Tor—the root hash is obtained from a trusted source. After that, you can obtain lower nodes of the Merkle tree from untrusted peers. All of these nodes exist in the same tree-like structure described above, and they all are partial representations of the same data. The nodes from untrusted sources are checked against the trusted hash. If they match the trusted source (meaning they fit into the same Merkle tree), they are accepted and the process continues. If they are no good, they are discarded and searched for again from a different source .
+
+
+** **3.Algorithm** **
+**Find Operation in Merkle Tree**
+
+This function is used to **check whether the given key is present** in the Merkle tree or not. If it is present then it will return that node else it will return null.
+
+Step 1: We will take tree and key as parameters.
+Step 2: If the tree is null then we will return null.
+Step 3: If the tree->key is equal to the key we will return the tree.
+Step 4: If the key is smaller than tree->key then we will return find(tree->left, key)
+Step 5: else return find(tree->right, key)
