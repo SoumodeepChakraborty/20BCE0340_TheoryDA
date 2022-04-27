@@ -33,6 +33,26 @@ The reason that Merkle trees are useful in distributed systems is that it is ine
 
 The way that Merkle trees can be helpful in a peer-to-peer system has to do with trust. Before you download a file from a peer-to-peer source—like Tor—the root hash is obtained from a trusted source. After that, you can obtain lower nodes of the Merkle tree from untrusted peers. All of these nodes exist in the same tree-like structure described above, and they all are partial representations of the same data. The nodes from untrusted sources are checked against the trusted hash. If they match the trusted source (meaning they fit into the same Merkle tree), they are accepted and the process continues. If they are no good, they are discarded and searched for again from a different source .
 
+## ** **Architecture of a Merkle Tree** **
+
+So, technically, Merkle trees are data structure trees where the non-leaf node is defined as a hash value of its respective child nodes.
+
+This also means that the Merkle tree is inverted down where the leaf nodes are the lowest node. 
+
+**At the core of Merkle trees, we need to learn three important terms. They are as below:**
+
+- Merkle Root
+- Leaf Nodes
+- Non-Leaf Nodes
+
+If you look at the Merkle tree, it is an upside-down tree. The tree can summarize a whole set of transactions by itself. This means that the user can verify if a transaction is part of the block or not.
+
+To make Merkle trees work, hashing is used. It simply does the hashing pairs of nodes repeatedly until only one hash value is left. The left hash value is known as Merkle Root or the Root Hash. The tree is created from the bottom up using the individual transactions hashes. The individual transaction hashes are also known as Transaction IDs. 
+
+The leaf nodes are the nodes that contain transactional data hashes. In the case of the non-leaf nodes, they store the hash of the two previous hashes.
+
+Another important property of Merkle trees is that it is binary in nature. This means that it requires leaf nodes to be even for it works. In case, if there is an odd number of leaf nodes, it will simply duplicate the last hash and make it even.
+
 
 ## ** **3.Algorithm** **
 
