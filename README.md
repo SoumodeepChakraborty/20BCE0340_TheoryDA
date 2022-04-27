@@ -57,7 +57,19 @@ Another important property of Merkle trees is that it is binary in nature. This 
 
 Let’s try to understand it by taking an example.
 
-![Architecture]
+![Architecture](https://github.com/SoumodeepChakraborty/20BCE0340_TheoryDA/blob/main/Merkle.1jpg.png)
+
+Here, we see that four transactions have taken place in the block. These transactions are named X, Y, Z, and W. The transactions are then hashed and then stored in leaf nodes which we name as Hash X, Hash Y, Hash Z, and Hash W.
+
+Once done, the leaf nodes of Hash X, Y, Z, and W are again hashed and created into a combined hash of XY and ZW. Finally, these two hashes are used to create the Merkle Root or Root Hash.
+
+The whole process of hashing can be done on a very large data set which makes the Merkle Trees data structure useful in the case of decentralized networks.
+
+As we discussed earlier, hashing algorithms usage depends on the implementation. However, one of the most common hash functions that are used includes the SHA-2 cryptographic hash function. 
+
+So, a transaction can be verified if the previous transactions are verifiable, thanks to the hash values.
+
+
 
 Here, we see that four transactions have taken place in the block. These transactions are named X, Y, Z, and W. The transactions are then hashed and then stored in leaf nodes which we name as Hash X, Hash Y, Hash Z, and Hash W.
 
