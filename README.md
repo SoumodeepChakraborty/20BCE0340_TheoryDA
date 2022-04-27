@@ -197,3 +197,9 @@ Each node is created by hashing the concatenation of its “parents” in the tr
 
 ## ** **Create and Verify the Merkle Tree** **
 ### Files added to the Repository
+
+
+## ** **References** **
+1. ![](https://101blockchains.com/merkle-trees/)
+2. ![](https://www.geeksforgeeks.org/introduction-to-merkle-tree/#:~:text=Merkle%20tree%20also%20known%20as,as%20far%20left%20as%20possible.)
+3. ![](https://brilliant.org/wiki/merkle-tree/)
