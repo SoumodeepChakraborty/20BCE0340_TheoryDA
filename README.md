@@ -200,6 +200,6 @@ Each node is created by hashing the concatenation of its “parents” in the tr
 
 
 ## ** **References** **
-1. ![](https://101blockchains.com/merkle-trees/)
-2. ![](https://www.geeksforgeeks.org/introduction-to-merkle-tree/#:~:text=Merkle%20tree%20also%20known%20as,as%20far%20left%20as%20possible.)
-3. ![](https://brilliant.org/wiki/merkle-tree/)
+1. ![google link](https://101blockchains.com/merkle-trees/)
+2. ![google link](https://www.geeksforgeeks.org/introduction-to-merkle-tree/#:~:text=Merkle%20tree%20also%20known%20as,as%20far%20left%20as%20possible.)
+3. ![google link](https://brilliant.org/wiki/merkle-tree/)
